@@ -1,0 +1,933 @@
+ /* --------logo */ 
+.logo{
+	cursor: pointer;
+    width: 11.0rem;
+    height: 4.0rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 0.9rem;
+}
+.logo img{
+	  vertical-align: middle;
+    width: 4.0rem;
+    height: 4.0rem;
+    border: 1px solid #F8E71C;
+}
+.logo>span{
+	  position: absolute;
+	  right: 0rem;
+	  top: 0rem;
+	  height: 4rem;
+	  font-size: 3rem;
+	  line-height: 4rem;
+}
+/*--------- 导航栏 */
+ol.nav {
+	  padding-top: 1.5rem;
+    color: #fff;
+    width: 100%;
+    height: 6.0rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 35%;
+    z-index: 100;   
+}
+ol.nav li:hover{
+    text-shadow:0px 0px 12px #ccc;
+}
+ol.nav li {
+	opacity: 1;
+    font-size: 1rem;
+    float: left;
+    width: 7%;
+    height: 5.0rem;
+    text-align: center;
+    line-height: 5.0rem;
+    cursor: pointer;
+    position: relative;
+}
+ol.nav li:nth-child(2) i{
+    display: block;
+}
+ol.nav li:nth-child(2){
+	color: #F8E71C;
+}
+ol.nav li i{
+	display: none;
+	position: absolute;
+	width: 84%;
+	height: 0.18rem;
+	top: 2.43rem;
+	left: 7%;
+	background-color: #F8E71C;
+}
+
+
+/* 登录方式 */
+ol.nav .way{
+    margin-top: 1.5rem;
+    position: fixed;
+    top: 0rem;
+    right: 3rem;
+}
+ol.nav .way a:nth-child(1){
+	position: relative;
+}
+ol.nav .way a:nth-child(1):hover .houtaiguanli{
+	display: block;
+}
+ol.nav .way a:nth-child(1) .houtaiguanli{
+	font-size: 12px;
+	position: absolute;
+	top: 2.2rem;
+	left: 0;
+	color: #fff;
+	line-height: 1rem;
+	display: none;
+}
+ol.nav .way a{
+    line-height: 2rem;
+    text-align: center;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+}
+ol.nav .way a img{
+    margin-top: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+ol.nav .way .erweima{
+    position: absolute;
+    top: 3rem;
+    right: -2.9rem;
+    width: 8.0rem;
+    height: 8.0rem;
+    display: none;
+}
+ol.nav .way .erweima img{
+    width: 8.0rem;
+    height: 8.0rem;
+}
+ol.nav .way .erweima::after{
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px transparent solid;
+    border-left: 8px transparent solid;
+    border-right: 8px transparent solid;
+    border-bottom: 8px #fff solid;
+    position: absolute;
+    top: -1.0rem;
+    left: 3.5rem;
+}
+
+/* <模块一 Five内容 start*/
+.five{
+	width: 100%;
+    height: 64.0rem;
+    background-image: url(../images/bkg3.jpg);
+    -webkit-background-size:cover ;
+    background-size:cover;
+    position: relative;
+    overflow: hidden;
+}
+/* 模块一遮罩层 */
+.five .zhezhao1{
+	width: 100%;
+	height: 64rem;
+	opacity: 0.6;
+	background-color: #000;
+}
+.givemefive1{
+	color: #fff;
+	font-size: 3.3rem;
+    width: 13.0rem;
+    height: 13.0rem;
+    position: absolute;
+    top:22.0rem;
+    left: 7.5rem;
+    -webkit-transform: translate(-50rem);
+        -ms-transform: translate(-50rem);
+            transform: translate(-50rem);
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+}
+.five:hover .givemefive1{
+	-webkit-transform: rotate(0deg) translate(0,0);
+	    -ms-transform: rotate(0deg) translate(0,0);
+	        transform: rotate(0deg) translate(0,0);
+
+}
+.givemefive1>img{
+	height: 13rem;
+}
+
+.video-control{
+	color: #fff;
+	text-align: center;
+	height: 3.0rem;
+	width: 12.0rem;
+	position: absolute;
+	bottom: 22.0rem;
+	left: 7rem;
+  font-size: 1.3rem;
+  -webkit-transform: translate(100rem);
+      -ms-transform: translate(100rem);
+          transform: translate(100rem);
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+.five:hover .video-control{
+	-webkit-transform: rotate(0deg) translate(0,0);
+	    -ms-transform: rotate(0deg) translate(0,0);
+	        transform: rotate(0deg) translate(0,0);
+}
+
+.video-control .play{
+	display: inline-block;
+	cursor: pointer;
+	width: 3.5rem;
+	height: 3.5rem;
+	text-align: center;
+	line-height: 3.5rem;
+	border-radius: 50%;
+	/* background-color: #fff; */
+	margin-right: 0.4rem;
+}
+
+
+.video-control img{
+	cursor: pointer;
+	width: 3.5rem;
+	vertical-align:middle;
+}
+/* <!-- 模块一 Five内容 end */
+
+/* 遮罩层,视频播放 -----------satrt*/
+.player {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	border-radius: 4px;
+	background: #fff url(../images/loading.gif) center/300px no-repeat;
+}
+
+video {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.controls {
+	width: 100%;
+	height: 2.5rem;
+	background-color: rgb(16, 16, 16);
+	border-radius: 4px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	z-index: 99;
+	opacity: 0.3;
+	/* transition:all 1s; */
+}
+.controls:hover  {
+	opacity: 1;
+}
+/*播放/暂停*/
+/* .controls .switch {
+	display: block;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	color: #FFF;
+	position: absolute;
+	top: 11px;
+	left: 2%;
+} */
+/*全屏按钮*/
+/* .controls .expand {
+	display: block;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	color: #FFF;
+	position: absolute;
+	right: 2%;
+	top: 11px;
+} */
+/*进度条*/
+/* .progress {
+	width: 75%;
+	height: 10px;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: #555;
+	cursor: pointer;
+	position: absolute;
+	top: 16px;
+	left: 5%;
+} */
+/*下载进度*/
+/* .progress .loaded {
+	width: 0;
+	height: 100%;
+	background-color: #999;
+} */
+/*播放进度*/
+/* .progress .line {
+	width: 0;
+	height: 100%;
+	background-color: #FFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+} */
+/**/
+/* .progress .bar {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+} */
+/*时间*/
+/* .timer {
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	right: 90px;
+	top: 11px;
+	color: #FFF;
+	font-size: 14px;
+} */
+
+
+/* 关闭按钮 */
+/* .close{
+	position: fixed;
+	right: 1rem;
+	top: 1rem;
+	cursor: pointer;
+	transition:all 2s;
+} */
+/* 遮罩层,视频播放 -----------end
+
+/* 下载方式 */
+.download{
+	width: 25.0rem;
+	height: 3rem;
+	position: absolute;
+	bottom: 4.0rem;
+	right: 1.5rem;
+	line-height: 4rem;
+}
+.download a{
+	margin-right: 0.7rem;
+}
+.download a:nth-child(3){
+	position: absolute;
+	right: 0rem;
+	top: 0rem;
+	background-color: #fff;
+	height: 2.8rem;
+	width: 2.8rem;
+	text-align: center;
+	border: 1px solid #fff;
+	opacity: 0.5;
+}
+.erweima2{
+	position: absolute;
+	right: 2rem;
+	top: -11rem;
+	width: 8.0rem;
+    height: 8.0rem;
+    display: none;
+}
+.erweima2 img{
+	width: 10.0rem;
+  height: 10.0rem;
+}
+
+
+
+
+
+
+
+
+
+/* 模块二的css --------------------------------------------------------*/
+.social{
+	width: 100%;
+	height: 64rem;
+  background-color: #4A4A4A;
+  z-index: 1;
+  position: relative;
+}
+
+
+/* 图片展示 */
+.social ul.list-img-1 li{
+	width: 32%;
+	height: 40rem;
+	float: left;
+	background-color: red;
+	margin-left: 0.5rem;
+	opacity: 0.6;
+	cursor: pointer;
+}
+.social ul.list-img-1 li:nth-child(1){
+	width: 29%;
+	height: 37.3rem;
+	margin-top: 0.5rem;
+	background-image: url(../images/shequ1.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.social ul.list-img-1 li:nth-child(2){
+	width: 44%;.
+	height: 27.1rem;
+	margin-top: 0.5rem;
+	background-image: url(../images/shequ6.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.social ul.list-img-1 li:nth-child(3){
+	width: 24.5%;
+	height: 17.8rem;
+	margin-top: 0.5rem;
+	background-image: url(../images/shequ3.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.social ul.list-img-1 li:nth-child(4){
+	width: 29%;
+	height: 24.9rem;
+	margin-top: -2rem;
+	background-image: url(../images/shequ4.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.social ul.list-img-1 li:nth-child(5){
+	width: 44%;
+	height: 22.4rem;
+	margin-top: 0.5rem;
+	background-image: url(../images/shequ5.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.social ul.list-img-1 li:nth-child(6){
+  width: 24.5%;
+	height: 27.0rem;
+	margin-top: -21.5rem;
+	background-image: url(../images/shequ2.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+/* 社区精选 */
+.selection{
+	position: absolute;
+	width: 16.3rem;
+	height: 12.0rem;
+	left: 78.4%;
+	top: 79%;
+}
+.selection > h4{
+	color: #F8E71C;
+	margin-bottom: 2.0rem;
+	font-size: 1.4rem;
+}
+.selection > p{
+	color: #ccc;
+	font-size: 0.9rem;
+}
+.selection > a{
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	line-height: 2.8rem;
+	margin-top: 1.5rem;
+	width: 9.0rem;
+	height: 2.8rem;
+	border-radius: 2rem;
+	background-color:#F8E71C;	
+
+}
+
+
+.selection>a:hover{
+	background-color: #4FE3C3;
+}
+.selection>a span{
+	font-weight: bold;
+	display: inline-block;/* 转化成行内快,animation在有效 */
+	margin-right: 0.7rem;
+	transform:translateX(-7px);animation:a1 1.5s infinite;
+}
+@keyframes a1{
+	0%,40%,100%{transform:translateX(-7px);}
+	20%{transform:translateX(0px);}
+}
+.selection>a em{
+	font-style: normal;
+	display: inline-block;
+	transform:translateX(-7px);animation:a1 1.6s infinite;
+}
+
+
+
+
+
+
+/* 第三模块功能模块 -----------------------------------------------------------------*/
+.function{
+	height: 64.0rem;
+    background-color: #cff;
+    background-image: url(../images/bkg2.jpg);
+    -webkit-background-size:100% 100% ;
+    background-size: 110% 100%;
+    position: relative;
+}
+/* 模块三遮罩 */
+.function .zhezhao3{
+    width: 100%;
+    height: 64rem;
+    opacity: 0.6;
+    background-color: #000;
+}
+/* givemefive 图*/
+.givemefive2{
+	color: #fff;
+	font-size: 3.3rem;
+    width: 13.0rem;
+    height: 13.0rem;
+    position: absolute;
+    top:20.0rem;
+    left: 7.5rem;
+    display: none;
+}
+.givemefive2>img{
+    height: 13rem;
+}
+/* 分类 */
+.function .classify{
+	width: 27.0rem;
+    height: 7.0rem;
+    position: absolute;
+    top:42.0rem;
+    left: 6rem;
+}
+.function .classify li{
+	float: left;
+	width: 8rem;
+	text-align: center;
+    cursor: pointer;
+}
+.function .classify li p{
+    margin-top: 1.6rem;
+    font-size: 1.1rem;
+    color: #fff;
+}
+.function .classify li img{
+    cursor: pointer;
+}
+
+.function .classify li:nth-child(1) img{
+    -webkit-transform:scale(0.8);
+        -ms-transform:scale(0.8);
+            transform:scale(0.8);-webkit-animation:scaleImg 1.2s infinite;animation:scaleImg 1.2s infinite;
+}
+.function .classify li:nth-child(2) img{
+    -webkit-transform:scale(0.8);
+        -ms-transform:scale(0.8);
+            transform:scale(0.8);-webkit-animation:scaleImg 1.2s infinite;animation:scaleImg 1.2s infinite;
+    -webkit-animation-delay:0.2s;
+            animation-delay:0.2s;
+}
+.function .classify li:nth-child(3) img{
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform:rotateY(0deg);
+            transform:rotateY(0deg);-webkit-animation:rotateImg 10s infinite;animation:rotateImg 10s infinite;
+}
+@-webkit-keyframes scaleImg{
+    0%,100%{-webkit-transform:scale(1);transform:scale(1);}
+    50%{-webkit-transform:scale(0.8);transform:scale(0.8);}
+}
+@keyframes scaleImg{
+    0%,100%{-webkit-transform:scale(1);transform:scale(1);}
+    50%{-webkit-transform:scale(0.8);transform:scale(0.8);}
+}
+@-webkit-keyframes rotateImg{
+    0%,40%,80%{-webkit-transform:rotateY(180deg);transform:rotateY(180deg);}
+    20%,60%,100%{-webkit-transform:rotateY(-180deg);transform:rotateY(-180deg);}
+}
+@keyframes rotateImg{
+    0%,40%,80%{-webkit-transform:rotateY(180deg);transform:rotateY(180deg);}
+    20%,60%,100%{-webkit-transform:rotateY(-180deg);transform:rotateY(-180deg);}
+}
+
+
+
+
+
+
+
+
+
+/* 模块四 F-Sport -------------------------------------------------------*/
+.F-Sport{
+	  height: 64.0rem;
+    background-image: url(../images/bkg1.jpg);
+    -webkit-background-size:cover ;
+    background-size: cover;
+    position: relative;
+}
+/* 遮罩层 */
+.zhezhao4{
+		width: 100%;
+		height: 64rem;
+		opacity: 0.6;
+		background-color: #000;
+}
+/* givemefive 图*/
+.givemefive3{
+	  color: #fff;
+	  font-size: 3.3rem;
+    width: 13.0rem;
+    height: 13.0rem;
+    position: absolute;
+    top:19.0rem;
+    left: 7.5rem;
+    display: none;
+}
+.givemefive3>img{
+    height: 13rem;
+}
+/* 资料 */
+.material{
+	width: 37.0rem;
+    height: 9.0rem;
+    position: absolute;
+    top:40.0rem;
+    left: 7.5rem;
+
+}
+.material a{
+	display: inline-block;
+	height: 3rem;
+	font-size: 2.0rem;
+	color: #fff;
+	margin-right: 2rem;
+}
+a.F-btn{
+	position: absolute;
+	text-align: center;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	top: 0rem;
+	right: 4rem;
+	font-size: 1rem;
+	border-radius: 3.0rem;
+	width: 10rem;
+	background-color: #F8E71C;
+}
+a.F-btn strong{
+	font-size: 1.2rem;
+	margin-left: 0.5rem;
+	transition:all 2s;
+}
+a.F-btn:hover{
+	background-color:  #4FE3C3;
+}
+a.F-btn:hover strong{
+	margin-left: 2rem;
+}
+.material .words{
+	font-size: 0.9rem;
+	color: #fff;
+	margin-top: 2rem;
+	height: 5rem;
+	width: 37.0rem;
+}
+.material .words p{
+	line-height: 1.5rem;
+}
+
+
+/* 模块5------------------------------------------------------- */
+.meet{
+	height: 64.0rem;
+	background-color: #1B1B1B;
+}
+.meet .meet-left{
+	width: 60%;
+	height: 100%;
+	/* background-image: url(../images/shequ6.jpg);
+	-webkit-background-size: cover;
+	background-size: cover; */
+	background-color: #1B1B1B;
+	float: left;
+}
+.meet .meet-right{
+	overflow: hidden;
+	position: relative;
+	width: 35%;
+	height: 100%;
+	background:url(../images/bkg4.jpg);
+  -webkit-background-size:cover ;
+  background-size: cover;
+	float: right;
+	margin-right: 2rem;
+}
+.meet .meet-right .map-top{
+	position: absolute;
+	width: 100%;
+	height: 2.2rem;
+	background-color: #1B1B1B;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+.meet .meet-right .map-bottom{
+	position: absolute;
+	width: 100%;
+	height: 3.8rem;
+	background-color: #1B1B1B;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+.meet .meet-right em{
+	cursor: pointer;
+	border-radius: 50%;
+	background-image: url(../images/paobu.png);
+	background-size: cover;
+	transform:scale(0.7);-webkit-animation:scaleImg 1.3s infinite;animation:scaleImg 1.2s infinite;
+}
+.meet .meet-right span{
+	cursor: pointer;
+	border-radius: 50%;
+	background-image: url(../images/jianshenfang.png);
+	background-size: cover;
+	transform:scale(0.7);-webkit-animation:scaleImg 1.4s infinite;animation:scaleImg 1.4s infinite;
+}
+.meet .meet-right i{
+	cursor: pointer;
+	border-radius: 50%;
+	background-image: url(../images/ticede.png);
+	background-size: cover;
+	transform:scale(0.7);-webkit-animation:scaleImg 1.5s infinite;animation:scaleImg 1.6s infinite;
+}
+/* 遮罩层 */
+.zhezhao5{
+		width: 100%;
+		height: 64rem;
+		opacity: 0.8;
+		background-color: #000;
+}
+@-webkit-keyframes scaleImg{
+    0%,100%{-webkit-transform:scale(1.1);transform:scale(1.1);}
+    50%{-webkit-transform:scale(0.7);transform:scale(0.7);}
+}
+@keyframes scaleImg{
+    0%,100%{-webkit-transform:scale(1.1);transform:scale(1.1);}
+    50%{-webkit-transform:scale(0.7);transform:scale(0.7);}
+}
+/* meet左半部分翻转的内容 */
+/* 翻转 */
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.col{
+  width: calc(50% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+
+.front,
+.back{
+  background-size: cover;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    text-align: center;
+    min-height: 280px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.back{
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg,  #000 0%,#fff 100%);
+  background: -o-linear-gradient(45deg,  #000 0%,#fff 100%);
+  background: linear-gradient(45deg,  #000 0%,#fff 100%);
+}
+
+.front:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 6rem;
+    color: #F8E71C;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #F8E71C;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: rgba(255,255,255,0.7);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
